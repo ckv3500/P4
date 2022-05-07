@@ -1,0 +1,288 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html {
+	background-color: white;
+}
+/* the styles for the elements */
+body {
+	font-family: Arial, Helvetica, sans-serif;
+    font-size: 100%;
+    width: 99%;
+    max-width: 1000px;
+    margin: 0 auto;
+    border: 3px solid black;
+    background-color: whitesmoke;
+}
+
+a:focus{
+    font-style: italic;
+}
+
+a:hover{
+    font-style: italic;
+}
+
+header{
+    border-bottom: auto;
+    padding-top: 1.5em;
+    padding-bottom: 2em;
+    border-bottom: 3px solid black;
+    background-image: -moz-linear-gradient(30deg, cyan 0%, cyan 30%, white 50%, cyan 80%, cyan 100%);
+    background-image: -webkit-linear-gradient(30deg, cyan 0%, #fffded 30%, white 35%, #fffded 80%, cyan 100%);
+    background-image: -o-linear-gradient(30deg, cyan 0%, #fffded 30%, white 50%, #fffded 80%, cyan 100%);
+}
+
+/* the styles for the header */
+header h2 {
+    font-size: 175%;
+    color: blue;
+    text-align: center;
+}
+
+header h3 {
+    font-size: 130%;
+    font-style: italic;
+    
+}
+header img {
+	float: left;
+    padding: 0 3.75%; 
+    
+}
+
+.shadow {
+    text-shadow: 2px 2px 2px blue;
+}
+
+#nav_menu ul {
+    margin: 0;
+    padding: 0;
+    position: top;
+    list-style-type: none;
+    width: 125%;
+}
+
+#nav_menu ul li {
+    float: left;
+    width: 20%;
+}
+
+#nav_menu ul li a {
+    text-align: center;
+    padding: 1em 0;
+    background-color: blue;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    display: block;
+}
+
+#nav_menu a.current {
+    color: yellow;
+}
+
+#nav_menu ul ul {
+    display: none;
+    position: top;
+    top: 100%;
+    width: 400%;
+}
+
+#nav_menu ul ul li {
+    float: none;
+}
+
+#nav_menu ul li:hover > ul {
+    display: block;
+}
+
+#nav_menu > ul::after {
+    display: block;
+    clear: both;
+    content: "";
+}
+
+/* the styles for the section */
+main {
+	clear: left;
+    
+}
+
+section {
+    width: 70%;
+    float: right;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+    padding-bottom: 20px;
+}
+
+
+section h1 {
+    font-size: 150%;
+    margin: 0;
+    padding-top: .5ems;
+    padding-bottom: .25ems;
+}
+
+section h2 {
+    font-size: 130%;
+    color: blue;
+    padding: .5em 0 .25em 0;
+    
+}
+
+section h3 {
+    font-size: 105%;
+    padding-bottom: .25em;
+}
+
+section img {
+    padding-bottom: 1em;
+}
+
+section p {
+    padding-bottom: .5em;
+}
+
+section blockquote{
+    padding-left: 2em;
+    padding-right: 2em;
+    font-style: italic;
+}
+
+section ul {
+    padding-left: 1.25em;
+    padding-bottom: .25em;
+    list-style-type: circle;
+}
+
+section li {
+    padding-bottom: .35em;
+}
+
+
+article {
+    padding-top: .5ems;
+    padding-bottom: .5ems;
+    border-bottom: 2px solid #800000;
+    border-top: 2px solid #800000;
+}
+
+article img {
+    float: right;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    border-bottom-color: 1px solid black;
+    border-top-color: 1px solid black;
+    max-width: 40%;
+    min-width: 150px;
+}
+
+article h2 {
+    padding-top: 0em;
+}
+
+article h3 {
+    font-size: 105%;
+    padding-bottom: .25ems;
+}
+
+aside {
+    width: 50%;
+    float: right;
+    padding-left: 2.5%;
+    padding-bottom: 20px;
+}
+
+aside h2 {
+	color: #800000;
+	font-size: 130%;
+	padding: .5em 0 .25em 0;
+}
+
+aside h3 {
+    font-size: 105%;
+    padding-bottom: .25ems;
+}
+
+aside img {
+    padding-bottom: 1em;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 40%;
+  border-radius: 5px;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+img {
+  border-radius: 5px 5px 0 0;
+}
+
+.container {
+  padding: 2px 16px;
+}
+/* the styles for the footer */
+
+footer{
+    background-color: deepskyblue;
+    clear: right;
+}
+
+footer p {
+    text-align: center;
+    color: black;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+#mobile_menu {
+    display: none;
+}
+
+@media only screen and (max-width: 959px) {
+	section h1 { font-size: 135%; }
+	section h2, aside h2 { font-size: 120%; }
+}
+
+@media only screen and (max-width: 767px) {
+	header img { float: none; }
+	header { text-align: center; }
+	section {
+		float: none;
+		width: 95%;                     
+	}
+	aside {
+		float: none;
+		padding-right: 2.5%;          
+		width: 95%;                   
+	}
+    article img { max-width: 30%; }
+    #speakers {
+		-moz-column-count: 2;
+		-webkit-column-count: 2;
+		column-count: 2;
+	}
+	#nav_menu {
+		display: none;
+	}
+	#mobile_menu {
+		display: block;
+	}
+	.slicknav_menu {
+		background-color: blue !important;
+	}
+}
+
+@media only screen and (max-width: 479px) {
+	body { font-size: 90%; }
+}
